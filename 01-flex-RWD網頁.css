@@ -1,0 +1,255 @@
+*{
+    box-sizing:border-box
+
+}
+
+body{
+    margin: 0 auto;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.navbar{
+    width: 360px;
+    height: 100%;
+    background-color: rgb(253, 214, 114);
+    display: flex;
+    flex-direction: column;
+    /* 水平置中 */
+    align-items: center;
+    padding-top: 75px;
+    /* justify-content: center;??? */
+
+}
+
+.logo{
+    width: 150px;
+    height: 150px;
+    background-color: rgba(238, 238, 238, 0.507);
+    margin-bottom: 64px;
+    background-image: url(https://d1csarkz8obe9u.cloudfront.net/posterpreviews/travel-logo-design-template-dea5e985c2bd8754168665d387bb284c_screen.jpg?ts=1610888433);
+    background-size: cover;
+    border-radius: 100px 100px;
+    border: solid 5px rgb(251, 251, 198);
+}
+
+.menu{
+    padding: 0;
+    list-style: none;
+    
+
+}
+
+.menu-list{
+    text-align: center;
+    font-size: 30px;
+    color:rgb(255, 255, 255);
+    text-shadow: 1px 3px 5px rgba(255, 141, 75, 0.959);
+    
+    
+}
+
+.content{
+    width: calc(100% - 360px);
+    height: 100%;
+    background-color: rgba(218, 165, 32, 0.438);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photos{
+    width: 960px;
+    height: 570px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.photo{
+    width: calc((100% - 40px) / 3);
+    height: 100%;
+    /* margin-right: 20px; */
+}
+
+.photo-1{
+    background-image: url(./IMG/FOREST1\ \(2\).png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px 10px;
+}
+
+.photo-2{
+    background-image: url(./IMG/ocean\ \(1\).png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px 10px;
+}
+
+.photo-3{
+    background-image: url(./IMG/sky\ \(2\).png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px 10px;
+}
+
+.photo-1:hover {
+    background-image: url(./IMG/FOREST1\ \(1\).png);
+    background-size: cover;
+}
+
+.photo-2:hover {
+    background-image: url(./IMG/ocean\ \(2\).png);
+    background-size: cover;
+}
+
+.photo-3:hover {
+    background-image: url(./IMG/sky\ \(1\).png);
+    background-size: cover;
+}
+
+
+/* SMALLCP */
+@media screen and (max-width:1370px) {
+    .photos{
+        width: 800px;
+        flex-wrap: wrap;
+        
+    }
+
+    .photo{
+        width: calc((100% - 20px) / 2);
+        height: calc(50% - 10px);
+        justify-content: space-between;
+        /* margin-right: 20px; */
+        /* align-self: flex-end; */
+    
+    }
+    
+    .photo-1{
+        width: 100%;
+        height: calc(50% - 10px);
+        /* margin-right: 0px; */
+        margin-bottom: 20px;
+    }
+}
+
+
+/* TABLE */
+@media screen and (max-width:1190px) {
+    .container{
+        flex-wrap: wrap;
+        height: unset;
+    }
+
+    .navbar{
+        width: 100%;
+        height: 100px;
+        flex-direction: row ;
+        align-items: none;
+        padding-top: 0px;
+        padding-left: 34px;
+        justify-content:  space-between;
+        
+        
+    }
+    
+    .logo{
+        width: 80px;
+        height: 80px;
+        margin-bottom: 0px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .menu{
+        display: flex;
+        margin-right: 34px;
+        align-items: center;
+    }
+    
+    .menu-list{
+        padding-left: 40px;
+        list-style: none;
+        font-size: 24px;
+        color:rgba(255, 250, 250, 0.74);
+    }
+    
+    .content{
+        width: 100%;
+        height:unset;
+        align-items: start;
+        /* padding-top: 50px; */
+    }
+    
+    .photos{
+        width: 700px;
+        height: 800px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+}
+
+/* MOBILE */
+@media screen and (max-width:720px) {
+   .navbar{
+        height: 80px;
+        padding-left: 0px;
+        justify-content: center;
+        position: relative;
+    }
+
+    .menu{
+        margin-right: 0px;
+    }
+    
+    .menu-list{
+        padding-left: 0px;
+        font-size: 0px;
+    }
+
+    .logo{
+        width: 54px;
+        height: 54px;
+        
+    }
+
+    .mbi-btn{
+        width: 40px;
+        height: 50px;
+        background-color: rgba(255, 127, 80, 0.472);
+        display: flex;
+        position: absolute;
+        left: 18px;
+
+
+    }
+
+    .content{
+        justify-content: center;
+    }
+    
+    .photos{
+        align-content:start;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .photo-1{
+        margin-bottom: 0;
+    }
+    
+    .photo{
+        width: 100%;
+        height: calc(100vh  / 3);
+        
+    }
+    
+}
+
+
